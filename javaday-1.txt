@@ -1,0 +1,375 @@
+Introduction to Java
+--------------------------------
+1)It is a object oriented program.
+2)It is secure,portable,platform independent.
+3)Java is simpler than c and c++ as we don't have pointer concept,multiple inheritance,operator overloading.
+4)In java we have constructor but we don't have destructor .There is automatic garbage clearance.
+5)java support multithreading or multitasking.
+6)in java we can create application for single user or standalone application,multiuser application,webbased and mobile application.
+7)In java we have the concept of exception handling.
+
+----------------------------------------------------
+operators :-
+------------------
+there are 3 types of operator.
+1)uinary--->   i++,++i,i--,--i
+
+2)binary--->  
+i)arithmatic operator :- +,-,*,/,%
+ii)logical operator :- &&,|| ,nor, !
+iii)comparative :- >,<,>=,<=,==
+iv)bitwise operator :- <<,>>,&,|
+
+3)ternary :- ?,:
+-------------------------------------------------------------
+Data type :-
+--------------------------
+primary datatype:-
+-------------------------------
+1)byte --- 1byte 
+2)short -- 2 bytes
+3)int -- 4 bytes
+4)long -- 8 bytes
+5)float -- 4 bytes
+6)double -- 8 bytes
+7)char --- 2 bytes
+8)boolean - 1 bit
+--------------------------------------
+seconday/derived datatype
+------------------------------------ 
+1)String 
+2)array
+3)class
+----------------------------------------------------------------------------
+1)class <name>  will be same for the filename.java
+after compilation it will be converted to filename.class
+pedefined class name will be In caps .
+methods will be in Camel case . example (toUpper())
+key words will be in small letter.
+-------------------------------------------------------------------------
+All datatypes in java are also class known as wrapper class.
+---------------------------------
+all classess belongs to java.lang package.
+1)byte ----Byte
+2)short --- Short
+3)int ----Integer
+4)long --- Long
+5)float --- Float
+6)char --- Character
+7)double -- Double
+8)boolean --- Boolean
+9)String 
+------------------------------------------------------------------------------
+class and Object  :-
+---------------------------
+1)class :- 
+it is a collection of similar objects or template for an object .
+a class contain variables and methods.
+a class donot have any functionality.A class protects our data by using access specifiers.
+
+we have 4 access specifiers.
+1)private :- if we declare variables and methods are private we can access it within the class only.
+2)public :-if we declare variables and methods are public we can access it within the class ,outside the class and outside the package.
+3)protected :-if we declare variables and methods are protected we can access it within the class and in the child class.
+4)default :-if we declare variables and methods are default we can access it within the class ,outside the class but not outside the package.
+-------------------------------------------------------------------------
+Object:- It is a instance of a class.It is a ref pointer to a class.
+we can access variables and methods of a class by an object.
+--------------------------------------------------------------------------
+OOPS concept
+--------------------------
+1)It deals with the real world intity.
+1)class 2)object
+3)inheritance:-The main purpose of inheritance is we can use the existing code without starting from the scarch(reuse of existing code).In this existing code is the parent/base/super class and the class which will inherite the parent class is the child/derive/sub-class.
+
+we use the keyword super to accessing the super class methods and variables. we use extends  keyword to inherite the super class(example :- class First extends Second) .
+
+In java it supports only single inheritance.(single,multi-level,hierarchical)
+
+we create object of the child class and access the parent class proporties.
+---------------------------------------------------------------------------------------------------------------------
+Constructor 
+-------------------
+1)A constructor is a function which has the same name as that of the class name.
+2)It doesnot have any return type nor it return any value.
+3)a constructor is the first thing to execute when an object is created for a class.
+example :- First ob=new First()<------constructor; 
+4)There are 2 types of constructor 
+i)default constructor it is without any parameter.
+ii)parameterized constructor it is with parameter.
+
+5)it we use more than one constructor in a program it is known as constructor overloading.
+
+6)constructor are mainly used to assign the values.
+----------------------------------------------------------------------------------------- 
+difference between function and constructor
+--------------------------------------------------------------------
+1)a function has return type and can return a value .except void.
+It doesnot have any return type nor it return any value.
+
+2)a function have any name other than the class name.
+A constructor is a function which has the same name as that of the class name.
+
+3)if we use same function name more than one time in a program with different data type the parameters and return type .it is known as function overloading.
+If we use more than one constructor in a program it is known as constructor overloading.
+
+4)with single object we can access n no of functions.
+we have to create an object each time we want to execute an constructor.
+
+--------------------------------------------------------------------------------------------------
+Abstract class 
+---------------------
+1)An abstract class is a class which cannot be instanciated (object cannot be created)
+2)it contains concret/normal methods and abstract methods(methods without body)
+3)we have to inherite the abstract class into a class and have to override the abstract methods in it and create object for that class.
+4)we use the keyword abstract for the class and method.
+---------------------------------------------------------------------------------------------
+Interface
+---------------------
+1)It is similar to abstract class.we cannot instanciate an interface.
+2)By interface java support multiple inheritance.
+3)Interface only contain abstract methods.it doesnot contain concret methods.
+4)while overriding abstact methods in the subclass they should have public access specifier.
+5)if we declare a variable inside interface it is bydefault static and final. 
+
+
+Polymorphism
+-------------------------------------------------------------------------
+poly means many ,morphism means forms
+
+there are 2 types of Polymorphism
+1)compile time Polymorphism (function overloading)
+2)runtime Polymorphism (function overriding) (abstract class,interface)
+-------------------------------------------------------------------------
+Encapsulation   (like capsule protect your medicine)
+----------------------------------------------------------------------------------------------
+protecting of data from been accessed by other classes.
+we can declare the variables as private and give the access by public methods.
+-------------------------------------------------------------------------------------------------
+Abstraction :-(if we switch on the fan it start working)
+-------------------
+It is the process by which complexcity is hidden and the simplecity is displayed.
+In class we have methods where complex bussiness logic are defined but outside class we create object and access these methods.
+--------------------------------------------------------------------------------------
+static
+-----------
+1)it is used for memory management .In this a single copy is made in the JVM.
+So we can access static variable,method,class without creating object.
+2)we can declare static variable,static method,static inner class,static block.
+3)static block execute before the main method.
+4)we cannot access normal variables inside a static method.But we can access static variable inside a normal method.
+--------------------------------------------  
+final
+----------------
+1)The final keyword in java is used to restrict the user.
+2)we can declare a class as final,variable as final,method as final.
+if we declare class as final we cannot inherite it.
+if we declare variable as final we cannot change it.we have to assign it.
+if we declare method as final we cannot override it.
+------------------------------------------------------------------------
+Exception Handling
+---------------------------------
+There are 3 types error .
+---------------------------------
+i)compile time (spelling mistake,syntax error)
+ii)run time (wrong input)
+iii)logical error(wrong logic)
+In exception handing we are going to handle runtime exception.
+The main purpose is to should display the error message and allow the program to continue till the end.
+---------------------------------------------------
+the runtime exception are 3 types
+---------------------------------------------------
+1)checked exception
+i)Interrupted exception ii)SQLException iii)IOException iv)ServletException
+2)unchecked exception
+i)Arithmatic Exception ii)NumberFormat Exception iii)ArrayIndexOutOfBound exception 
+3)error 
+i)Hardisk failure ii)stack Overflow
+------------------------------------------------------------- 
+There are 5 key words to handle the error
+1)try 2)catch 3)finally 4)throw 5)throws
+---------------------------------------------------------------------
+try-catch
+-----------------
+If try is success (there is error) then catch is also success .catch will display the error message.
+It try is not success then catch is also not success.(no error).
+
+
+try-finally
+----------------
+try is success or failure it does not matter the finally block will definitly execute.
+so the connect closing,file closing etc will be defined in the finally block.
+
+throws
+---------------
+It is mainly used for checked exceptions.we can add it to a function or main method.
+we donot require any body for it. 
+
+throw 
+-------------
+it is used to handle user defined exception .
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
